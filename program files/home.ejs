@@ -1,0 +1,194 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/mainhome.css">
+    <title>mainhome</title>
+</head>
+<body>
+    <div class="container" action="/mainhome" method="POST">
+        <div class="head" style="background :linear-gradient(to right, #fbfcfa, #79a2e5); padding: 5px;display: flex;background-size: cover;">
+            <h1 style="font-family: forte; font-size: 70px;"><span style="color: rgb(45, 152, 252);font-family: forte;">Happi</span> Ride</h1>
+            <div style="margin-left: auto;font-size: 130%;">
+                <a href="/home" style="text-decoration: none; color: black; padding: 10px;">Home</a>
+                <a href="about.html" style="text-decoration: none; color: black; padding: 10px;">About</a>
+                <a href="rides.html" style="text-decoration: none; color: black; padding: 10px;">Rides</a>
+                <a href="profile.html" style="text-decoration: none; color: black; padding: 10px;">Profiles</a>
+                <a href="/login" style="text-decoration: none; color: black; padding: 10px;" onclick="openLoginForm()">Login</button>
+                <a href="/register" style="text-decoration: none; color: black; padding: 10px;"onclick="openSignupForm()">Register</a>
+        
+            </div>
+        </div>
+    <div class="content" style="padding: 10px;">
+        <h1 style="font-family: forte; font-size: 50px; ">Welcome to <span style="color:  rgb(45, 152, 252);font-family: forte;">Happi</span> residence</h1>
+        <p style="font-size: 20px;">We are here to provide you with the best ride experience. We have the best drivers and the best cars. We are here to make your ride experience the best.
+                                    We are here to provide you with the best ride experience. We have the best drivers and the best cars. We are here to make your ride experience the best. 
+                                    We are here to provide you with the best ride experience. We have the best drivers and the best cars. We are here to make your ride experience the best.</p>
+    </div>
+    <div class="services" style="padding: 10px;">
+        <h1 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 30px;">Our Services</h1>
+        <a href="/car" style="text-decoration: none;">
+            <div class="service">
+                <h2>Cars</h2><hr>
+                <p style="color: black;">Get the best Ride for at the best prices for your ride experience.</p>
+                <div class="service-img">
+                    <img src="carimage.png" alt="car">
+                </div>
+            </div>
+        </a>
+        <a href="/twowheeler" style="text-decoration: none;">
+            <div class="service">
+                <h2>Two Wheeler</h2><hr>
+                <p style="color: black;">Get the best Bikes or Scooty for at the best prices for your ride experience.</p>
+                <div class="service-img">
+                    <img src="twowheer.png" alt="twowheeler">
+                </div>
+            </div>
+        </a>
+        <a href="/parsal" style="text-decoration: none;">
+            <div class="service">
+                <h2>Parsal</h2><hr>
+                <p style="color: black;">secure your product and safe transporting.</p>
+                <div class="service-img">
+                    <img src="images.jpeg" alt="Parsal">
+                </div>      
+            </div>
+        </a>
+    </div>
+    <div class="finding-root">
+        <h3 style="font-family: forte; font-size: 40px;"><span style="color: rgb(45, 152, 252);font-family: forte;">Happi</span> Ride</h3>
+        <label for="from">From:</label>
+        <input type="text" id="from" name="form" required><br>
+        <label for="to">To:</label>
+        <input type="text" id="to" name="to" required><br>
+        <button type="submit">Find Ride</button>
+    </div>
+</div>
+<div class="footer" style="background-color:rgb(45, 152, 252); padding: 10px; color: white; text-align: center;">
+    <p>&copy; 2025 Happi Ride. All Rights Reserved.</p>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/mainhome.css">
+    <title>mainhome</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <!-- Left Side: Navigation links -->
+            <div class="navigation">
+                <a href="/home">Home</a>
+                <a href="/about">About</a>
+                <a href="/profile">Profiles</a>
+                
+                <a href="/login">Login</a>
+                <a href="/register">Register</a>
+        
+            </div>
+
+            <!-- Right Side: Logo and User Info -->
+            <div class="logo-and-user-info">
+                <h1><span class="brand" style="color: chartreuse;">Happi</span> Residence</h1>
+                
+            </div>
+        </div>
+
+        
+        <section class="search-container">
+            <input list="location" id="location-search" type="text" placeholder="Search Location">
+            <datalist id="location">
+                <option value="Guntur"></option>
+                <option value="Hyderabad"></option>
+                <option value="vizag"></option>
+                <option value="chennai"></option>
+                <option value="Tenali"></option>
+                <option value="Ponnuru"></option>
+            </datalist>
+            <button type="submit">Search</button>
+            
+        </section>
+        <h1>Popular Hotels</h1>
+        <div class="popular-places">
+            
+            <div class="place">
+                <a href="/login"><img src="hotelpic1jpg.jpeg" alt="Place 1"></a>
+                <h2>ITC Grand</h2>
+            </div>
+            <div class="place">
+                <a href="/login"><img src="hotelpic2.jpeg" alt="Place 2"></a>
+                <h2>Noval</h2>
+            </div>
+            <div class="place">
+                <a href="/login"><img src="" alt="Place 3"></a>
+                <h2>Gowtham Grand</h2>
+            </div>
+            <div class="place">
+                <a href="/login"><img src="hotelpic4.jpeg" alt="Place 4"></a>
+                <h2>Venkates Grand</h2>
+            </div>
+            <div class="place">
+                <a href="/login"><img src="hotelpic5.j[g.jpeg" alt="Place 5"></a>
+                <h2>Sanjanadri</h2>
+            </div>
+        </div>
+        <h1>Popular Hotels</h1>
+        <div class="popular-places">
+            
+            <div class="place">
+                <a href="/login"><img src="hotelpic1jpg.jpeg" alt="Place 1"></a>
+                <h2>ITC Grand</h2>
+            </div>
+            <div class="place">
+                <a href="/login"><img src="hotelpic2.jpeg" alt="Place 2"></a>
+                <h2>Noval</h2>
+            </div>
+            <div class="place">
+                <a href="/login"><img src="hotelpic3.jpeg" alt="Place 3"></a>
+                <h2>Gowtham Grand</h2>
+            </div>
+            <div class="place">
+                <a href="/login"><img src="hotelpic4.jpeg" alt="Place 4"></a>
+                <h2>Venkates Grand</h2>
+            </div>
+            <div class="place">
+                <a href="/login"><img src="hotelpic5.j[g.jpeg" alt="Place 5"></a>
+                <h2>Sanjanadri</h2>
+            </div>
+        </div>
+        <h1>Popular Hotels</h1>
+        <div class="popular-places">
+            
+            <div class="place">
+                <a href="/login"><img src="hotelpic1jpg.jpeg" alt="Place 1"></a>
+                <h2>ITC Grand</h2>
+            </div>
+            <div class="place">
+                <a href="/login"><img src="hotelpic2.jpeg" alt="Place 2"></a>
+                <h2>Noval</h2>
+            </div>
+            <div class="place">
+                <a href="/login"><img src="hotelpic3.jpeg" alt="Place 3"></a>
+                <h2>Gowtham Grand</h2>
+            </div>
+            <div class="place">
+                <a href="/login"><img src="hotelpic4.jpeg" alt="Place 4"></a>
+                <h2>Venkates Grand</h2>
+            </div>
+            <div class="place">
+                <a href="/login"><img src="hotelpic5.j[g.jpeg" alt="Place 5"></a>
+                <h2>Sanjanadri</h2>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2025 Happi Residence. All Rights Reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

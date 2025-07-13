@@ -1,0 +1,185 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/mainhome.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Main Home</title>
+    
+</head>
+<body>
+
+   
+    <div class="head">
+        <h1>Happi Residence</h1>
+        <div class="side_bar">
+            <a href="/home">Home</a>
+            <a href="about.html">About</a>
+            <a href="rides.html">Rides</a>
+            <i class='bx bxs-user-circle'></i> 
+            <div class="logininfo">
+                <h1>Welcome,<br><h3><%= Name %></h3></h1>
+                <a href="/logout">Logout</a>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <h1>Welcome to Happi Residence</h1>  
+    </div>
+
+  
+    <div class="search-container">
+        <input id="location-search" type="text" placeholder="Search Location">
+        <div id="suggestions"></div>
+    </div>
+
+    
+    <div class="footer">
+        <p>&copy; 2025 Happi Ride. All Rights Reserved.</p>
+    </div>
+
+    <script>
+        function initAutocomplete() {
+            let input = document.getElementById("location-search");
+            let autocomplete = new google.maps.places.Autocomplete(input);
+
+            autocomplete.addListener("place_changed", function() {
+                let place = autocomplete.getPlace();
+                console.log("Selected place:", place.formatted_address);
+            });
+        }
+
+        function loadScript() {
+            let script = document.createElement("script");
+            script.src = "https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initAutocomplete";
+            script.defer = true;
+            document.head.appendChild(script);
+        }
+
+        // Load script when the page loads
+        window.onload = loadScript;
+    </script>
+
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/mainhome.css">
+    <title>mainhome</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <!-- Left Side: Navigation links -->
+            <div class="navigation">
+                <a href="/mainhome">Home</a>
+                <a href="/about">About</a>
+                <a href="/profile">Profile</a>
+            </div>
+
+            <!-- Right Side: Logo and User Info -->
+            <div class="logo-and-user-info">
+                <h1><span class="brand" style="color: chartreuse;">Happi</span> Residence</h1>
+                <div class="logininfo">
+                    <h2>Welcome, <span><%= Name %></span></h2>
+                    <a href="/logout">Logout</a>
+                </div>
+            </div>
+        </div>
+
+        
+  <center><h2>Search for a City</h2></center>
+  <center><input type="text" id="searchInput" placeholder="search location" /></center>
+  <center><ul id="results"></ul></center>
+
+  <script>
+    const cities = ["Kakinada", "Vijayawada", "Nellore", "Vizag", "Chennai", "Bangalore", "Delhi", "Hyderabad"];
+
+    const input = document.getElementById("searchInput");
+    const results = document.getElementById("results");
+
+    input.addEventListener("input", () => {
+      const query = input.value.toLowerCase().trim();
+      results.innerHTML = "";
+
+      if (query === "") return;
+
+      const filtered = cities.filter(city => city.toLowerCase().includes(query));
+
+      filtered.forEach(city => {
+        const li = document.createElement("li");
+        li.textContent = city;
+        li.addEventListener("click", () => {
+          window.location.href = `https://www.google.com/maps/place/${encodeURIComponent(city)}`;
+        });
+        results.appendChild(li);
+      });
+    });
+
+    input.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        const city = input.value.trim();
+        if (city !== "") {
+          window.location.href = `https://www.google.com/maps/place/${encodeURIComponent(city)}`;
+        }
+      }
+    });
+  </script>
+
+        <h1>Popular Hotels</h1>
+        <div class="popular-places">
+            
+            <div class="place">
+                <a href="https://res.itchotels.com/?adult=1&arrive=2025-04-05&chain=26676&child=0&config=Business&currency=INR&depart=2025-04-06&gad_source=1&gclid=Cj0KCQjwhr6_BhD4ARIsAH1YdjCJUEv4J3Q3cqt42RRnMRl8nAtgRVOZEwDwhDZ2ymjSL-aCJj_TEQMaAoJiEALw_wcB&hotel=36675&hotelID=36675&journey=undefined&level=hotel&locale=en-US&productcurrency=INR&rate=PFLASHMM%2CRDAILYB%2CRDAILYBM&rooms=1&specialCode=NA&stayLength=1&theme=Umbrella_chain&utm_campaign=PFX_Google-HQ_DTL-HTL-WH-QO-Search-Brand-GUNWG-AO-Rooms-WH_Guntur-Guntur-Feeder-C3&utm_content=search&utm_medium=cpc&utm_source=google"><img src="h1.jpeg" alt="Place 1"></a>
+                <h2>ITC Grand</h2>
+            </div>
+            <div class="place">
+                <a href="https://www.booking.com/hotel/in/novotel-vijayawada-varun.html"><img src="download.jpeg" alt="place 2"></a>
+                <h2>Novotel</h2>
+            </div>
+            <div class="place">
+                <a href="https://www.gouthamhotels.com/"><img src="grand" alt="Place 3"></a>
+                <h2>Gowtham Grand</h2>
+            </div>
+            <div class="place">
+                <a href="https://www.agoda.com/the-park-hotel-visakhapatnam/hotel/visakhapatnam-in.html?countryId=35&finalPriceView=1&isShowMobileAppPrice=false&cid=1918349&numberOfBedrooms=&familyMode=false&adults=2&children=0&rooms=1&maxRooms=0&checkIn=2025-04-12&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=1&showReviewSubmissionEntry=false&currencyCode=INR&isFreeOccSearch=false&los=1&searchrequestid=9f9d0f6e-20f2-4c1f-8713-76a72f78a2d6&ds=iOFMgsZZwn%2BaQM%2BU"><img src="h2.jpg" alt="Place 4"></a>
+                <h2>Park Hotel</h2>
+            </div>
+            <div class="place">
+                <a href="https://www.justdial.com/Vijayawada/Sea-Pearl-Resorts-Vijayawada-Ho/0866PX866-X866-140328131708-K6C8_BZDET?trkid=&term=&ncatid=10040905&area=&search=Relax%20by%20the%20Shore:%20Top%20Beach%20Resorts%20in%20Tenali&mncatname=Beach%20Resorts&abd_btn=&abd_heading=&bd=1&cat_b2b_flag=0&searchfrom=lst"><img src="h3.jpeg" alt="place 5"></a>
+                <h2>Sea-Pearl</h2>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 Happi Residence. All Rights Reserved.</p>
+        </div>
+    </div>
+    <!--<script>
+        function initAutocomplete() {
+            let input = document.getElementById("location-search");
+            let autocomplete = new google.maps.places.Autocomplete(input);
+
+            autocomplete.addListener("place_changed", function() {
+                let place = autocomplete.getPlace();
+                console.log("Selected place:", place.formatted_address);
+            });
+        }
+
+        function loadScript() {
+            let script = document.createElement("script");
+            script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBtUHHr2hoCmBCa1wXpzKlNXdc7Czy1vJM&libraries=places&callback=initAutocomplete";
+            script.defer = true;
+            document.head.appendChild(script);
+        }
+
+        // Load script when the page loads
+        window.onload = loadScript;
+    </script>-->
+</body>
+</html>
+
